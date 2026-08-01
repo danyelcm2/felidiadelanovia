@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para mi amor | Día de la Novia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <section class="screen screen-start is-active" id="startScreen" aria-labelledby="startTitle">
+      <div class="floating-tulips" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="start-content">
+        <p class="eyebrow">1 de agosto</p>
+        <h1 id="startTitle">Feliz Día de la Novia, mi amor</h1>
+        <p class="intro">
+          Preparé una sorpresa lila, suave y llena de tulipanes. Antes de leer tu carta,
+          tienes que ayudar al corazoncito a encontrar sus flores.
+        </p>
+        <button class="primary-button" id="startButton" type="button">
+          <span>Comenzar</span>
+          <span class="button-heart" aria-hidden="true">♥</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="screen screen-game" id="gameScreen" aria-labelledby="gameTitle">
+      <div class="game-shell">
+        <header class="game-header">
+          <div>
+            <p class="pixel-label">Nivel 1</p>
+            <h2 id="gameTitle">Camino de tulipanes</h2>
+          </div>
+          <div class="game-stats" aria-live="polite">
+            <span id="tulipCounter">Tulipanes 0/7</span>
+            <span id="heartLives" aria-label="vidas">♥ ♥ ♥</span>
+          </div>
+        </header>
+
+        <div class="canvas-wrap">
+          <canvas id="gameCanvas" width="900" height="540" aria-label="Minijuego de laberinto"></canvas>
+          <div class="bear-speech-bubble" id="bearSpeechBubble" aria-live="polite"></div>
+          <div class="toast" id="gameToast">Usa las flechas o los botones para moverte</div>
+        </div>
+
+        <div class="touch-controls" aria-label="controles táctiles">
+          <button data-move="up" aria-label="arriba">▲</button>
+          <div>
+            <button data-move="left" aria-label="izquierda">◀</button>
+            <button data-move="down" aria-label="abajo">▼</button>
+            <button data-move="right" aria-label="derecha">▶</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen screen-letter" id="letterScreen" aria-labelledby="letterTitle">
+      <div class="letter-scene">
+        <div class="letter-card">
+          <div class="letter-top">
+            <span class="seal">♥</span>
+            <span class="tulip-line" aria-hidden="true">🌷 🌷 🌷 🌷 🌷 🌷 🌷</span>
+          </div>
+          <p class="eyebrow">Para mi novia</p>
+          <h2 id="letterTitle">Mi amor</h2>
+          <div class="letter-text" id="letterText"></div>
+          <p class="signature">Con todo mi amor,<br><span>tu novio</span></p>
+          <button class="secondary-button" id="replayButton" type="button">Jugar otra vez</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
