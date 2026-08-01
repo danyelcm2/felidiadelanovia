@@ -341,17 +341,30 @@ document.addEventListener("keydown", (event) => {
   movePlayer(move[0], move[1]);
 });
 
+const movesByDirection = {
+  up: [0, -1],
+  down: [0, 1],
+  left: [-1, 0],
+  right: [1, 0]
+};
+
 document.querySelectorAll("[data-move]").forEach((button) => {
-  button.addEventListener("click", () => {
-    const direction = button.dataset.move;
-    const movesByDirection = {
-      up: [0, -1],
-      down: [0, 1],
-      left: [-1, 0],
-      right: [1, 0]
-    };
-    const move = movesByDirection[direction];
+  let lastTouchAt = 0;
+
+  function moveFromButton() {
+    const move = movesByDirection[button.dataset.move];
     movePlayer(move[0], move[1]);
+  }
+
+  button.addEventListener("touchstart", (event) => {
+    event.preventDefault();
+    lastTouchAt = Date.now();
+    moveFromButton();
+  }, { passive: false });
+
+  button.addEventListener("click", () => {
+    if (Date.now() - lastTouchAt < 700) return;
+    moveFromButton();
   });
 });
 
