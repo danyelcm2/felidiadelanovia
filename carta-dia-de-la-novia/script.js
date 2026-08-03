@@ -38,10 +38,10 @@ let moves = 0;
 let speechBubbleTimer;
 
 const letterParagraphs = [
-  "Mi amor, feliz Día de la Novia. Hice este pequeño detalle pensando en ti, en tus colores lila y en esos tulipanes que hacen que todo se vea más bonito, como si el mundo supiera ponerse tierno para ti.",
-  "Gracias por ser esa persona que me alegra los días, que me inspira a cuidar los detalles y que vuelve especial hasta lo más sencillo. Me encanta tu forma de existir, tu risa, tu ternura y todo lo que eres.",
-  "Quiero que esta carta te recuerde que eres muy amada. Ojalá cada flor de este juego llegue como un abrazo, y cada corazoncito como una forma pequeña de decirte: me haces muy feliz.",
-  "Te quiero muchísimo, mi amor."
+  "Feliz Día de la Novia, mi amor 💗",
+  "Quiero aprovechar este día para decirte lo mucho que te amo y lo feliz que me hace tenerte conmigo. Desde que estamos juntos te has convertido en alguien muy importante para mí. Me encanta tu forma de ser, tu sonrisa, tu voz, tus ojitos y todos esos detalles que hacen que cada día me gustes más. De verdad me siento muy afortunado de poder llamarte mi novia.",
+  "Gracias por todo el cariño que me das, por estar conmigo en los momentos buenos y también cuando no todo está bien. Me gusta mucho pasar tiempo contigo, reírnos, jugar, hablar de cualquier cosa y simplemente disfrutar cuando estamos juntos. Tal vez no siempre sé cómo expresar todo lo que siento, pero espero que nunca dudes de que te amo muchísimo y que valoro mucho nuestra relación.",
+  "Quiero seguir estando contigo por mucho tiempo, seguir creando recuerdos, apoyarnos y hacer que lo nuestro sea cada vez más bonito. Voy a esforzarme siempre por cuidarte, respetarte y hacerte sentir lo especial que eres para mí. Te amo demasiado, mi amor, y espero que hoy recuerdes que para mí eres la novia más linda y que no te cambiaría por nada"
 ];
 
 function showScreen(name) {

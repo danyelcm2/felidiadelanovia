@@ -509,6 +509,12 @@ canvas {
   margin: 0 0 16px;
 }
 
+.letter-text p:first-child {
+  color: var(--ink);
+  font-size: 1.12em;
+  font-weight: 700;
+}
+
 .signature {
   position: relative;
   z-index: 1;
